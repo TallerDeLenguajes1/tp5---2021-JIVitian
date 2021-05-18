@@ -1,0 +1,13 @@
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\bin\Debug\netcoreapp3.1\TP05.exe
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\bin\Debug\netcoreapp3.1\TP05.deps.json
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\bin\Debug\netcoreapp3.1\TP05.runtimeconfig.json
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\bin\Debug\netcoreapp3.1\TP05.runtimeconfig.dev.json
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\bin\Debug\netcoreapp3.1\TP05.dll
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\bin\Debug\netcoreapp3.1\TP05.pdb
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.csprojAssemblyReference.cache
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.AssemblyInfoInputs.cache
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.AssemblyInfo.cs
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.csproj.CoreCompileInputs.cache
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.dll
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.pdb
+C:\Users\danie\Desktop\Cosas de Ivan\Facultad\Licenciatura En Informatica\2do Anio\Taller de Lenguajes 1\Practicos\TP05\tp5---2021-JIVitian\TP05\TP05\obj\Debug\netcoreapp3.1\TP05.genruntimeconfig.cache
