@@ -7,7 +7,9 @@ namespace TP05
         static void Main(string[] args)
         {
             //Ejercicio1();
-            Ejercicio2();
+            //Ejercicio2();
+            //Ejercicio3();
+            Ejercicio4();
 
 
             /*****Ejercicio 2*****/
@@ -90,5 +92,31 @@ namespace TP05
             } while(reDo);
         }
 
+        public static void Ejercicio3()
+        {
+            float a, b;
+
+            Console.WriteLine("Ingrese un número");
+            a = float.Parse(Console.ReadLine());
+
+            Console.WriteLine($"El valor absoluto de {a} es {Math.Abs(a)}");
+            Console.WriteLine($"El cuadrado de {a} es {Math.Pow(a, 2)}");
+            Console.WriteLine((a > 0) ? $"La raíz cuadrada de {a} es {Math.Sqrt(a)}" : $"{a} no tiene raiz cuadrada.");
+            Console.WriteLine($"El seno de {a} es {Math.Sin(a)}");
+            Console.WriteLine($"El coseno de {a} es {Math.Cos(a)}");
+            Console.WriteLine($"El parte entera de {a} es {(int) a}");
+
+            Console.WriteLine("Ingrese dos numeros");
+            a = float.Parse(Console.ReadLine());
+            b = float.Parse(Console.ReadLine());
+
+            Console.WriteLine($"El máximo es {Math.Max(a, b)}");
+            Console.WriteLine($"El minimo es {Math.Min(a, b)}");
+        }
+
+        public static void Ejercicio4()
+        {
+            
+        }
     }
 }
