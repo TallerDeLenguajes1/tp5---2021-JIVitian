@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TP05
 {
@@ -10,9 +11,6 @@ namespace TP05
             //Ejercicio2();
             //Ejercicio3();
             Ejercicio4();
-
-
-            /*****Ejercicio 2*****/
         }
 
         private static int invertir(int numero)
@@ -37,10 +35,23 @@ namespace TP05
 
             Console.WriteLine("Invertido: " + invertir(num) + "\n\n");
         }
+        
+        public static float calculadora(int opc, float a, float b)
+        {
+            var calculo = new Dictionary<int, float>
+            {
+                [1] = a + b,
+                [2] = a - b,
+                [3] = a * b,
+                [4] = a / b,
+            };
 
+            return calculo[opc];
+        }
         private static void Ejercicio2()
         {
-            int a, b, resultado = 0;
+            String[] operaciones = {"Suma", "Resta", "Multiplicación", "División"};
+            float a, b, resultado = 0;
             int opcion;
             String respuesta;
             bool reDo;
@@ -59,22 +70,23 @@ namespace TP05
                     Console.WriteLine("Ingrese el segundo valor: ");
                     b = int.Parse(Console.ReadLine());
 
-                    switch (opcion)
-                    {
-                        case 1:
-                            resultado = a + b;
-                            break;
-                        case 2:
-                            resultado = a - b;
-                            break;
-                        case 3:
-                            resultado = a * b;
-                            break;
-                        case 4:
-                            resultado = a / b;
-                            break;
-                    }
-                    Console.WriteLine("El resultado es: " + resultado);
+                    resultado = calculadora(opcion, a, b);
+                    // switch (opcion)
+                    // {
+                    //     case 1:
+                    //         resultado = a + b;
+                    //         break;
+                    //     case 2:
+                    //         resultado = a - b;
+                    //         break;
+                    //     case 3:
+                    //         resultado = a * b;
+                    //         break;
+                    //     case 4:
+                    //         resultado = a / b;
+                    //         break;
+                    // }
+                    Console.WriteLine($"La {operaciones[opcion - 1]} entre {a} y {b} es igual a: {resultado}");
 
                     Console.WriteLine("¿Desea realizar otra operación? (S/N)");
                     respuesta = Console.ReadLine();
@@ -116,7 +128,89 @@ namespace TP05
 
         public static void Ejercicio4()
         {
+            String cadena, cadenaBuscada, nuevaCadena;
+            String[] arreglo;
+            int longitud;
+
+            Console.WriteLine("Ingrese una String");
+            cadena = Console.ReadLine().Trim();
+            longitud = cadena.Length;
+
+            //Obtengo la segunda letra de la palabra ingresada
+            Console.WriteLine($"La primera letra de {cadena} es {cadena[0]}");
+            //Muestro la longitud
+            Console.WriteLine($"Su longitud es {longitud}");
+            //Concateno 2 cadenas
+            cadena += " es una cadena";
+            Console.WriteLine($"Concatenando: {cadena}");
+            //Extraigo una subcadena
+            cadena = cadena.Substring(0, longitud);
+            Console.WriteLine($"Obtengo la cadena original: {cadena}");
+
+            //Muestro de una forma mas amena el resultado de la calculadora en el ejercicio 2
+
+            //Recorrer la cadena de texto con un ciclo Foreach e ir mostrando elemento por elemento en pantalla
+            foreach (var letra in cadena)
+            {
+                Console.WriteLine(letra);
+            }
+
+            //Buscar la ocurrencia de una palabra determinada en la cadena ingresada
+            Console.WriteLine("Ingrese una subcadena para buscar:");
+            cadenaBuscada = Console.ReadLine().Trim();
+            Console.WriteLine($"La subcadena '{cadenaBuscada}' {(cadena.Contains(cadenaBuscada) ? "está" : "no está")} dentro de la cadena '{cadena}'");
+        
+            //Convierta la cadena a Mayúsculas y luego minúsculas
+            Console.WriteLine($"En mayusculas: '{cadena.ToUpper()}', en minusculas: '{cadena.ToLower()}'");
             
+            //Ingrese una nueva cadena y luego compare los valores de ambas.
+            Console.WriteLine("Ingrese una nueva cadena para comparar:");
+            nuevaCadena = Console.ReadLine().Trim();
+            Console.WriteLine($"{(cadena.Equals(nuevaCadena) ? "Las cadenas son iguales." : "Las cadenas son diferentes.")}");
+
+            //Ingrese una cadena separada por caracteres que usted determine y muestre por
+            //pantalla los resultados (Revisar el comportamiento de split())
+            Console.WriteLine("Ingrese una cadena de palabras separadas por coma (,):");
+            nuevaCadena = Console.ReadLine().Trim();
+            foreach (var subCadena in nuevaCadena.Split(','))
+            {
+                //El metodo Split retorna un arreglo de cadenas separadas por el carácter enviado por parametro
+                Console.WriteLine($"{subCadena}");                
+            }
+
+            //  Siguiendo con el ejemplo de la calculadora (ejercicio 2) ingrese una ecuación
+            // simple como cadena de caracteres y que el sistema lo resuelva. Por ej. ingrese
+            // por pantalla “582+2” y que le devuelva la suma de 582 con 2
+            Console.WriteLine("Ingrese una ecuación simple:");
+            cadena = Console.ReadLine().Trim();
+
+            if(cadena.Contains('+'))
+            {
+                arreglo = cadena.Split('+');   
+                Console.WriteLine($"El resultado de la operación es: {calculadora(1, int.Parse(arreglo[0]), int.Parse(arreglo[1]))}");
+            }
+            else if(cadena.Contains('-'))
+            {
+                arreglo = cadena.Split('-');   
+                Console.WriteLine($"El resultado de la operación es: {calculadora(2, int.Parse(arreglo[0]), int.Parse(arreglo[1]))}");
+            }
+            else if(cadena.Contains('*'))
+            {
+                arreglo = cadena.Split('*');   
+                Console.WriteLine($"El resultado de la operación es: {calculadora(3, int.Parse(arreglo[0]), int.Parse(arreglo[1]))}");
+            }
+            else if(cadena.Contains('/'))
+            {
+                arreglo = cadena.Split('+');   
+                Console.WriteLine($"El resultado de la operación es: {calculadora(4, int.Parse(arreglo[0]), int.Parse(arreglo[1]))}");
+            }
+            else
+            {
+                Console.WriteLine("La cadena ingresada no es una ecuación.");
+            }
+
         }
+
+        
     }
 }
