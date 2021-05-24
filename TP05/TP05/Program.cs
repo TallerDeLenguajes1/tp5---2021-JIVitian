@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace TP05
 {
@@ -10,7 +11,8 @@ namespace TP05
             //Ejercicio1();
             //Ejercicio2();
             //Ejercicio3();
-            Ejercicio4();
+            //Ejercicio4();
+            Ejercicio5();
         }
 
         private static int invertir(int numero)
@@ -208,9 +210,39 @@ namespace TP05
             {
                 Console.WriteLine("La cadena ingresada no es una ecuación.");
             }
-
         }
 
+        public static bool validarDireccion(string cadena)
+        {
+            // Una dirección puede tener protocolo de seguridad o no, www o no, y una extesnsión
+            Regex miRegex = new Regex(@"\A(https?://)?(([w]{3})\.)?[a-z0-9]+(\.)([a-z]{2,4})(\.[a-z]+)?\Z");
+
+            return miRegex.Matches(cadena).Count > 0;
+        }
+
+        public static bool validarMail(string cadena)
+        {
+            // Un mail puede o no tener puntos de por medio, debe contener un @ y un .[algo]
+            Regex miRegex = new Regex(@"\A(\w+\.?\w*\@\w+\.)([a-z]+)(\.[a-z]+)?\Z");
+
+            return miRegex.Matches(cadena).Count > 0;
+        }
+
+        public static void Ejercicio5()
+        {
+            string direccion = "megustanlossimpsons.net.ar", mail = "profesorx@herrera.edu.ar";
+
+            if (validarDireccion(direccion.ToLower()))
+                Console.WriteLine("El texto ingresado es una dirección web.");
+            else
+                Console.WriteLine("El texto ingresado NO(x) es una dirección web.");
+
+            if (validarMail(mail.ToLower()))
+                Console.WriteLine("El texto ingresado es un mail.");
+            else
+                Console.WriteLine("El texto ingresado NO(x) es un mail.");
+
+        }
         
     }
 }
